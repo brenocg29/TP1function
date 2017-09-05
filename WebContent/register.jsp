@@ -16,9 +16,9 @@
 
 </body>
 <div class="top">
-	<img src = 
+	<img class="logo" src = 
 			"http://4.bp.blogspot.com/-ZDXIfnQD2nI/UgEQO63k-
-			4I/AAAAAAAAAq4/xLIAeT8jx1I/s1600/foice.jpg" width = "640" height = "128">
+			4I/AAAAAAAAAq4/xLIAeT8jx1I/s1600/foice.jpg">
 <%
 	String penes = "penes";
 
