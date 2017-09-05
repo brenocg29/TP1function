@@ -25,11 +25,11 @@
 %>
 </div>
 <div class="init-body">
-o<p class="disclaimer">Input your data to get access to everyone network</p>
+<p class="disclaimer">Input your data to get access to everyone network</p>
 	<div class="data-input">
-		Name:<input type="text" name="Fname">
-		Surname:<input type="text" name ="Sname">
-		UIN: <input type="text" name="UIN">
+		Name:<input type="text" name="Fname" id = "Fname"><br>
+		Surname:<input type="text" name ="Sname" id = "Sname"><br>
+		UIN: <input type="text" name="UIN" id = "UIN"><br>
 	
 	</div>
 </div>

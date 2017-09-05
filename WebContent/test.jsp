@@ -19,13 +19,13 @@
 		<div class="init-banner">
 			<img src = 
 			"http://4.bp.blogspot.com/-ZDXIfnQD2nI/UgEQO63k-
-			4I/AAAAAAAAAq4/xLIAeT8jx1I/s1600/foice.jpg" width = "640" height = "128">
+			4I/AAAAAAAAAq4/xLIAeT8jx1I/s1600/foice.jpg" width = "640" height = "128" id="logo">
 		</div>
 		<div class="log-pass">
 			<form action=register.jsp>
-				Revolution number: <input type="text" name="fname">
-				Password: <input type="Password" name="lname">
-				<input type = "submit" class="btn btn-danger" value = Login>
+				Revolution number: <input type="text" name="login" id="login">
+				Password: <input type="Password" name="pass" id = "pass">
+				<input type = "submit" class="btn btn-danger" value=Login>
 			</form>
 		</div>
 	</div>
