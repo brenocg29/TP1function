@@ -1,0 +1,46 @@
+div.top{
+	background-color:red;
+	width:100%;
+	display:table;
+}
+div.data-input{
+	color:white;
+	font-family: 'Russo One', sans-serif;
+	font-size:12px;
+	
+}
+div.init-banner{
+	background-color:red;
+	width:50%;
+	float:left;
+	display:table-row;
+}
+
+div.log-pass{
+	color:white;
+	font-family: 'Russo One', sans-serif;
+	font-size:12px;
+	background-color:red;
+	width:50%;
+	margin-top:5%;
+	float:left;
+	display:table-row;
+}
+div.init-body{
+	background-color:Darkred;	
+	height:100%;
+	width:100%;
+	float:left;
+}
+div.text-disclaimer{
+	width:40%;
+	float:left;
+}
+.disclaimer{
+	font-family: 'Russo One', sans-serif;
+	font-size:24px;
+	color:white;
+}
+#lennin{
+	width:70%
+}
