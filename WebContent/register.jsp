@@ -30,7 +30,11 @@
 		Name:<input type="text" name="Fname" id = "Fname"><br>
 		Surname:<input type="text" name ="Sname" id = "Sname"><br>
 		UIN: <input type="text" name="UIN" id = "UIN"><br>
-	
+		Username:<input type="text" name="username" id = "username"><br>
+		Password:<input type="text" name="Password" id = "Password"><br>
+	</div>
+	<div id = "lenninBW"> 
+		<img src="http://pngimg.com/uploads/lenin/lenin_PNG1.png?i=1">
 	</div>
 </div>
 

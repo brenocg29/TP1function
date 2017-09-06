@@ -6,8 +6,17 @@ div.top{
 div.data-input{
 	color:white;
 	font-family: 'Russo One', sans-serif;
-	font-size:12px;
+	font-size:15px;
+	width:50%;
+	float:left;
 	
+}
+#Fname, #Sname, #UIN, #username, #Password{
+	display:block;
+	color:black;
+}
+#login, #pass{
+	color:black;
 }
 div.init-banner{
 	background-color:red;
@@ -15,7 +24,10 @@ div.init-banner{
 	float:left;
 	display:table-row;
 }
-
+div.logo_container img{
+	width:40%;
+	height:40%;
+}
 div.log-pass{
 	color:white;
 	font-family: 'Russo One', sans-serif;
@@ -43,4 +55,13 @@ div.text-disclaimer{
 }
 #lennin{
 	width:70%
+}
+#logo{
+	width:70vh;
+	height:20vh;
+}
+#lenninBW img{
+	width:50%;
+	height:25%;
+	float:left;
 }
