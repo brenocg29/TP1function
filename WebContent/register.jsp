@@ -28,7 +28,7 @@
 		Surname:<input type="text" name ="Sname" id = "Sname"><br>
 		UIN: <input type="text" name="UIN" id = "UIN"><br>
 		Username:<input type="text" name="username" id = "username"><br>
-		Password:<input type="text" name="Password" id = "Password"><br>
+		Password:<input type="password" name="Password" id = "Password"><br>
 		<input type = "submit" class="btn btn-danger" value=SendData>
 		</form>	
 	</div>
@@ -36,7 +36,7 @@
 		<img src="http://pngimg.com/uploads/lenin/lenin_PNG1.png?i=1">
 	</div>
 	<%
-		
+		Register reg = new Register();
 	%>
 </div>
 
