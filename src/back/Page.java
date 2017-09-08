@@ -23,17 +23,25 @@ public class Page {
 		this.numberFollowers = NumberFollowers;
 		this.Owner = owner;
 	}
-	public void MakePost() {
+	/**
+	 * Make a new post in the page
+	 * @param P Post Objetc
+	 */
+	public void MakePost(Post P) {
 		
 	}
-	public void ExpelComrade(){
+	/**
+	 * Expells a Comrade from the page
+	 * @param C Comrade to be expelled
+	 */
+	public void ExpelComrade(Comrade C){
 		
 	}
+	/**
+	 * Split the page in two, making social justice
+	 */
 	public void Reform(){
 		
 	}
-	public void CreatePage(//page data
-			) {
-		
-	}
+	
 }
