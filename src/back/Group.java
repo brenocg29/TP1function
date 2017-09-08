@@ -1,25 +1,46 @@
 package back;
 import back.JsonHandler;
 import back.Comrade;
-//import post when ready
+import back.Post;
+/**
+ * Represents a Group in the network
+ * @author Breno Chaves Gabrich
+ * @author Gabriel Pires
+ * @author Fernanda Ramalho
+ *
+ */
 public class Group {
 	private String name;
 	private String GroupId;
 	private String[] members;
-	//Post[] posts
+	private Post[] posts;
+	/**
+	 * Constructor for an existing group
+	 * @param name name of the group 
+	 * @param GroupId id of the group
+	 * @param members members of this group
+	 */
 	Group(String name, String GroupId,String[] members){
 		
 	}
-	Group(){
+	/**
+	 * Add a memeber to this group
+	 * @param com new member object 
+	 */
+	public void AddMember(Comrade com) {
 		
 	}
-	public void AddMember() {
+	/**
+	 * Change name of this group
+	 * @param NewName new name of the group
+	 */
+	public void ChangeName(String NewName) {
 		
 	}
-	public void ChangeName() {
-		
+	
+	public Post[] getPosts() {
+		return posts;
 	}
-	//public Comrade[] showMembers() {
 	public String getName() {
 		return name;
 	}
@@ -29,13 +50,25 @@ public class Group {
 	public String[] getMembers() {
 		return members;
 	}
+	/**
+	 * Add a new member to the group
+	 * @param newMember New member object
+	 */
 	public void addMember(Comrade newMember) {
 		
 	}
+	/**
+	 * Expel a member of the group
+	 * @param Member member object to be expelled
+	 */
 	public void expelMember(Comrade Member) {
 		
 	}
-	public void NewGroup(Comrade Creator) {
+	/**
+	 * Create a new Group.
+	 * @param Creator
+	 */
+	public static void NewGroup(Comrade Creator) {
 		
 	}
 }
