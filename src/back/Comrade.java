@@ -58,4 +58,7 @@ public class Comrade {
 			) {
 		
 	}
+	public void sendMessage(Comrade receiver, String text) {
+		
+	}
 }
