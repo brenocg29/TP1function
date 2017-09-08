@@ -1,4 +1,8 @@
 package back;
+import back.JsonHandler;
+import back.Group;
+import back.Page;
+import back.Post;
 public class Comrade {
 	private String name;
 	private String age;

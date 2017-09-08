@@ -10,8 +10,8 @@ public class Group {
 	Group(String name, String GroupId,String[] members){
 		
 	}
-	public String GetName() {
-		return "test";
+	Group(){
+		
 	}
 	public void AddMember() {
 		
@@ -29,6 +29,13 @@ public class Group {
 	public String[] getMembers() {
 		return members;
 	}
+	public void addMember(Comrade newMember) {
 		
-	//}
+	}
+	public void expelMember(Comrade Member) {
+		
+	}
+	public void NewGroup(Comrade Creator) {
+		
+	}
 }
