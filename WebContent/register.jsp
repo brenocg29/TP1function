@@ -36,7 +36,6 @@
 		<img src="http://pngimg.com/uploads/lenin/lenin_PNG1.png?i=1">
 	</div>
 	<%
-		Register reg = new Register();
 	%>
 </div>
 
