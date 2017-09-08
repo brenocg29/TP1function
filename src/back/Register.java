@@ -1,5 +1,11 @@
 package back;
 import back.JsonHandler;
+import back.Comrade;
+/**
+ * Class to handle registration process
+ * @author brenocg
+ *
+ */
 public class Register {
 	private String userName;
 	//todo: check on json if user name is in use
