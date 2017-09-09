@@ -3,8 +3,9 @@ import back.JsonHandler;
 import back.Comrade;
 /**
  * Class to handle registration process
- * @author brenocg
- *
+ * @author Breno Chaves Gabrich.
+ * @author Fernanda Ramalho.
+ * @author Gabriel Pires.
  */
 public class Register {
 	private String userName;
@@ -25,13 +26,13 @@ public class Register {
 		return true;
 	}
 	private void hashPass() {
-		//todo Hash password
+		//todo Hash password with SHA3
 	}
 	public boolean SaveNewUser() {	
 		if (CheckUsername()!= true) {
-		hashPass();
-		//todo call jsonhandler to save user
-		return true;
+			hashPass();
+			//todo call jsonhandler to save user
+			return true;
 		}
 		return false;
 	}

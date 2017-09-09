@@ -7,8 +7,8 @@ import back.Post;
 /** represents an user of the social network.
  * 
  * @author Breno Chaves Gabrich.
+ * @author Fernanda Ramalho.
  * @author Gabriel Pires.
- * @author Fernanada Ramalho.
  */
 public class Comrade {
 	private String name;
@@ -16,6 +16,10 @@ public class Comrade {
 	private String id;
 	private String birthday;
 	private String PhotoPath;
+	
+//	Ideias:
+//	private String unit; //Unidade militar
+	
 	/** represents user data
 	 * 
 	 * @param name The user name
@@ -27,6 +31,10 @@ public class Comrade {
 	Comrade(String name, String age, String Id, String birthday,String PhotoPath) {
 		
 	}
+	
+//	public String getParty() {
+//		return unit;
+//	}
 	
 	public String getName() {
 		return name;

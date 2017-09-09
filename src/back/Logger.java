@@ -3,9 +3,9 @@ import back.Comrade;
 import back.JsonHandler;
 /**
  * Handles login operation
- * @author Breno Chaves Gabrich
- * @author Gabriel Pires
- * @author Fernada Ramalho
+ * @author Breno Chaves Gabrich.
+ * @author Fernanda Ramalho.
+ * @author Gabriel Pires.
  *
  */
 public class Logger {

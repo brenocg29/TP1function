@@ -2,16 +2,16 @@ package back;
 import back.*;
 /**
  * Represent a profile for a user
- * @author Breno Chaves Gabrich
- * @author Gabriel Pires
- * @author Fernanda Ramalho
+ * @author Breno Chaves Gabrich.
+ * @author Fernanda Ramalho.
+ * @author Gabriel Pires.
  */
 public class Profile {
 	private Comrade User;
 	private boolean praise;
 	private Group[] groups;
 	private Page[] pages;
-	private Comrade[] comrads;
+	private Comrade[] comrades;
 	private Post[] posts;
 	/**
 	 * Create a Profile
@@ -27,7 +27,7 @@ public class Profile {
 		this.praise = praise;
 		this.groups = G;
 		this.pages = Pages;
-		this.comrads = C;
+		this.comrades = C;
 		this.posts = Posts;
 	}
 	/**
@@ -49,7 +49,7 @@ public class Profile {
 		return pages;
 	}
 	public Comrade[] getComrads() {
-		return comrads;
+		return comrades;
 	}
 	public Post[] getPosts() {
 		return posts;

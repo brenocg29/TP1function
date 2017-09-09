@@ -4,16 +4,18 @@ import back.Comrade;
 import back.Post;
 /**
  * Represents a Group in the network
- * @author Breno Chaves Gabrich
- * @author Gabriel Pires
- * @author Fernanda Ramalho
+ * @author Breno Chaves Gabrich.
+ * @author Fernanda Ramalho.
+ * @author Gabriel Pires.
  *
  */
 public class Group {
 	private String name;
 	private String GroupId;
-	private String[] members;
+	private String[] members; //Aqui seria os IDs, certo?
 	private Post[] posts;
+//	private Comrade[] admins; //Admins / moderadores (Commissars em russo soviético)
+	
 	/**
 	 * Constructor for an existing group
 	 * @param name name of the group 
@@ -38,6 +40,9 @@ public class Group {
 		
 	}
 	
+//	public Comrade[] getAdmins() {
+//		return admins;
+//	}	
 	public Post[] getPosts() {
 		return posts;
 	}

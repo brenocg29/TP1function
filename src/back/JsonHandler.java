@@ -3,9 +3,9 @@ import org.json.*;
 import back.*;
 /**
  * Class to handle all writing to json
- * @author Breno Chaves Gabrich
- * @author Gabriel Pires
- * @author Fernanda Ramalho
+ * @author Breno Chaves Gabrich.
+ * @author Fernanda Ramalho.
+ * @author Gabriel Pires.
  */
 public class JsonHandler {
 	private String pathToFile;

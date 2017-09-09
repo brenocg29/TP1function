@@ -3,9 +3,9 @@ import back.Comrade;
 import back.JsonHandler;
 /**
  * Represents a page
- * @author Breno Chaves Gabrich
- * @author Gabriel Pires
- * @author Fernanda Ramalho
+ * @author Breno Chaves Gabrich.
+ * @author Fernanda Ramalho.
+ * @author Gabriel Pires.
  *
  */
 public class Page {

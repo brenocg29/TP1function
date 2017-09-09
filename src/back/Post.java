@@ -3,14 +3,14 @@ import back.JsonHandler;
 import back.Comrade;
 /**
  * Represent a post
- * @author Breno Chaves Gabrich
- * @author Gabriel Pires
- * @author Fernanda Ramalho
+ * @author Breno Chaves Gabrich.
+ * @author Fernanda Ramalho.
+ * @author Gabriel Pires.
  */
 public class Post {
 	private Comrade Poster;
 	private String data;
-	private int LikeNum;
+	private int LikeNum; //Ура!(Ura!) https://en.wikipedia.org/wiki/File:%D0%A3%D1%80%D0%B0!.ogv
 	private String date;
 	private String[] comments;
 	/**
