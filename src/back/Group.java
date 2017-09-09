@@ -4,9 +4,9 @@ import back.Comrade;
 import back.Post;
 /**
  * Represents a Group in the network
- * @author Breno Chaves Gabrich.
- * @author Fernanda Ramalho.
- * @author Gabriel Pires.
+ * @author Breno Chaves Gabrich
+ * @author Fernanda Ramalho
+ * @author Gabriel Pires
  *
  */
 public class Group {

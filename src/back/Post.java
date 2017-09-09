@@ -3,9 +3,9 @@ import back.JsonHandler;
 import back.Comrade;
 /**
  * Represent a post
- * @author Breno Chaves Gabrich.
- * @author Fernanda Ramalho.
- * @author Gabriel Pires.
+ * @author Breno Chaves Gabrich
+ * @author Fernanda Ramalho
+ * @author Gabriel Pires
  */
 public class Post {
 	private Comrade Poster;

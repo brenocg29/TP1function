@@ -2,9 +2,9 @@ package back;
 import back.*;
 /**
  * Represent a profile for a user
- * @author Breno Chaves Gabrich.
- * @author Fernanda Ramalho.
- * @author Gabriel Pires.
+ * @author Breno Chaves Gabrich
+ * @author Fernanda Ramalho
+ * @author Gabriel Pires
  */
 public class Profile {
 	private Comrade User;

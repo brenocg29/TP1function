@@ -3,9 +3,9 @@ import back.JsonHandler;
 import back.Comrade;
 /**
  * Class to handle registration process
- * @author Breno Chaves Gabrich.
- * @author Fernanda Ramalho.
- * @author Gabriel Pires.
+ * @author Breno Chaves Gabrich
+ * @author Fernanda Ramalho
+ * @author Gabriel Pires
  */
 public class Register {
 	private String userName;

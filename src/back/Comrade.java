@@ -5,10 +5,9 @@ import back.Page;
 import back.Post;
 
 /** represents an user of the social network.
- * 
- * @author Breno Chaves Gabrich.
- * @author Fernanda Ramalho.
- * @author Gabriel Pires.
+ * @author Breno Chaves Gabrich
+ * @author Fernanda Ramalho
+ * @author Gabriel Pires
  */
 public class Comrade {
 	private String name;
