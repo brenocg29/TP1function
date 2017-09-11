@@ -333,19 +333,19 @@ Change Photo
 \begin_layout Plain Layout
 
 \size footnotesize
-Group(syndicate)
+Group
 \end_layout
 
 \begin_layout Plain Layout
 
 \size footnotesize
-Feed(Revolutionary Journal) 
+Feed
 \end_layout
 
 \begin_layout Plain Layout
 
 \size footnotesize
-Page(Nome pendente)
+Page
 \end_layout
 
 \begin_layout Plain Layout
@@ -370,6 +370,10 @@ Register
 
 \size footnotesize
 Post 
+\end_layout
+
+\begin_layout Plain Layout
+Profile
 \end_layout
 
 \end_inset
@@ -486,6 +490,10 @@ CreatePage
 
 \size footnotesize
 Comrade
+\end_layout
+
+\begin_layout Plain Layout
+Json handler
 \end_layout
 
 \end_inset
@@ -1228,6 +1236,147 @@ Json Handler
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="7cm">
+<column alignment="left" valignment="top" width="7cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Feed
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Responsibilities
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Collaboration
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Date
+\end_layout
+
+\begin_layout Plain Layout
+Posts per page
+\end_layout
+
+\begin_layout Plain Layout
+Posts
+\end_layout
+
+\begin_layout Plain Layout
+NewPost
+\end_layout
+
+\begin_layout Plain Layout
+Show posts
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Comrade
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Json Handler
+\end_layout
+
+\begin_layout Plain Layout
+Post
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Classes
+\end_layout
+
+\begin_layout Standard
+As classes definidas são simples, porém ainda sim acreditamos que sejam
+ capazes de representar corretamente os aspectos da rede social que planejamos
+ construir, segue uma breve explicação destas.
+\end_layout
+
+\begin_layout Standard
+A classe Comrade, representa um usúario do sistema, ele interaje com todas
+ as outras classes uma vez que é o usuário que toma as ações em uma rede
+ social deste tipo, são construídas também as classes, group e page, que
+ tem funções semelhantes porém representam coisas diferentes, uma página
+ pertence a alguém e esta pessoa faz os posts, já em um grupo todos podem
+ fazer os posts, que nesse caso são mensagens, um grupo também depende dos
+ membros deste para inserir novos membros, em uma página todos podem faze-lo.
+\end_layout
+
+\begin_layout Standard
+A classe profile, representa uma pagina de um usuário, ela apenas apresenta
+ as coisas relacionadas ao usuário, logger e register cuidam do logi e cadastro
+ de novos usuários respectivamente, post representa um post na rede social.
+\end_layout
+
+\begin_layout Standard
+Feed armazena as informações que serão exibidas no feed de notícias do usuário.
+\end_layout
+
+\begin_layout Standard
+A classe mais abstrata é o json handler que apenas serve para salvar as
+ informações no servidor, no formato Json.
 \end_layout
 
 \begin_layout Section

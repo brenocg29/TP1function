@@ -1310,7 +1310,15 @@ NewPost
 \end_layout
 
 \begin_layout Plain Layout
+change Posts per page
+\end_layout
+
+\begin_layout Plain Layout
 Show posts
+\end_layout
+
+\begin_layout Plain Layout
+LoadMorePosts
 \end_layout
 
 \end_inset
