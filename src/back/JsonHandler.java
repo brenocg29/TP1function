@@ -11,7 +11,7 @@ public class JsonHandler {
 	private String pathToFile;
 	/**
 	 * 
-	 * @param X Write an object to json, the object can be an comrade a page a post or a group
+	 * @param Com Write an object to json, the object can be an comrade a page a post or a group
 	 * @return result of operation
 	 */
 	public boolean SaveJson(Comrade Com){
@@ -28,7 +28,7 @@ public class JsonHandler {
 	}
 	/**
 	 * 
-	 * @param X Read from json, the object can be a comrade page, group or post
+	 * @param G Read from json, the object can be a comrade page, group or post
 	 * @return result of operation
 	 */
 	public boolean readFromJson(Group G) {

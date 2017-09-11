@@ -23,7 +23,13 @@
 <div class="init-body">
 <p class="disclaimer">Input your data to get access to everyone network</p>
 	<div class="data-input">
-	<form action=register.jsp>
+	<div class="quoteL">
+	<p>"The bourgeoisie incites the
+	 workers of one nation against those of another in the 
+	 endeavor to keep them disunited"</p><br>
+	 <p></p> Vladimir Lennin
+	</div>
+	<form action=register.jsp method = "POST">
 		Name:<input type="text" name="Fname" id = "Fname"><br>
 		Surname:<input type="text" name ="Sname" id = "Sname"><br>
 		UIN: <input type="text" name="UIN" id = "UIN"><br>

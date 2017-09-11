@@ -31,10 +31,6 @@ public class Comrade {
 		
 	}
 	
-//	public String getParty() {
-//		return unit;
-//	}
-	
 	public String getName() {
 		return name;
 	}
