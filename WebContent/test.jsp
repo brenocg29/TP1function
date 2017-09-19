@@ -22,7 +22,7 @@
 			"http://4.bp.blogspot.com/-ZDXIfnQD2nI/UgEQO63k-
 			4I/AAAAAAAAAq4/xLIAeT8jx1I/s1600/foice.jpg" width = "640" height = "128" id="logo">
 		</div>
-		<div class="log-pass">
+		<div class="log-pass col-md-6">
 			<form action=register.jsp>
 				Revolution number: <input type="text" name="login" id="login">
 				Password: <input type="Password" name="pass" id = "pass">
@@ -30,7 +30,7 @@
 			</form>
 		</div>
 	</div>
-	<div class="init-body">
+	<div class="init-body col-md-6">
 		<div class="text-disclaimer">
 			<p class="disclaimer"> The glorious government and our Wisest leaders of all mankind</p>
 			<p class="disclaimer">invite all of our comrades to join the GREAT social(network) revolution</p>
