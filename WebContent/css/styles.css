@@ -70,3 +70,10 @@ div.text-disclaimer{
 	width:50%;
 	float:right;
 }
+.form-group{
+	color:white;
+	font-family: 'Russo One', sans-serif;
+	font-size:15px;
+	width:45%;
+	float:left;
+}
