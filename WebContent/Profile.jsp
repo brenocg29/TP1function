@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="back.Comrade" import="Autentication.Register"%>
+    pageEncoding="UTF-8" import="back.Comrade" import="Autentication.Register" import = "java.util.List" import = "java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +17,7 @@
       type="text/css"/>
 </head>
 </body>
+<%! static List<String> posts = new ArrayList<String>(); %>
 <div class="top col-md-6">
 	<a class="waves-effect waves-light red darken-4 btn"><i class="material-icons left">home</i>Home</a>
 	<a class="waves-effect waves-light btn red darken-4"><i class="material-icons left">exit_to_app</i>Log Out</a>
@@ -43,13 +44,12 @@
         <div class="card white">
             <div class="card-content">
             <span class="card-title black-text">
-            Something on your mind?
-            </span>
-             <form class="container">
+            POST</span>
+             <form class="container" action = "#" method = "GET">
                  <div class = "row">
                    <div class="input-field col s12 m6">
-                     <textarea id="post"></textarea>
-                     <label for="email">Only allowed opinions</label>
+                     <textarea name="post" id="post"></textarea>
+                     <label for="post">Only allowed opinions</label>
                    </div>
                    <div class="input-field col m6">
                      <button class="btn waves-effect waves-light" type="submit" name="action">
@@ -60,8 +60,15 @@
        			</form>
             </div>
          </div>
-             
+    <%
+	String info = null;  
+     info = "FERROU";               		 
+	if((String)request.getParameter("post")!=null){
+		info = "success";
+	 	posts.add(request.getParameter("post").toString());
+	}%>
         </div>
+        <%for (String S:posts){%>
         <div class = "row">
         <div class = "col s12 m8 offset-m3">
         <div class="card white">
@@ -72,12 +79,13 @@
         </div>
             <div class="card-content">
             <span class="card-title black-text disclaimer">
-            	I think my buddy Kim Jong Un is doing a great job with Korea
+            	<%out.println(S); %>
             </span>
             </div>
             </div>
              </div>
         </div>
+        <%} %>
         <div class = "row">
        <div class = "col s12 m8 offset-m3">
         <div class="card white">
