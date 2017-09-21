@@ -27,7 +27,7 @@ public class Comrade {
 	 * @param birthday The user birthDay
 	 * @param PhotoPath The location of user photo
 	 */
-	Comrade(String name, String age, String Id, String birthday,String PhotoPath) {
+	public Comrade(String name, String age, String Id, String birthday,String PhotoPath) {
 		
 	}
 	

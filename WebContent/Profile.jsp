@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="back.Comrade" import="back.Register"%>
+    pageEncoding="UTF-8" import="back.Comrade" import="Autentication.Register"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,13 +41,35 @@
         </div>
         <div class = "col s12 m8 offset-m1">
         <div class="card white">
+        <div class="chip col m12 disclaimer" style = "color:black">
+        	Joseph
+        	<img src = "http://memes.ucoz.com/_nw/14/91658412.jpg">
+            
+        </div>
             <div class="card-content">
             <span class="card-title black-text disclaimer">
-            	POST 
+            	I think my budy Kim Jong Un is doing a great job with Korea
             </span>
             </div>
             </div>
-        
+        </div>
+       <div class = "col s12 m8 offset-m1">
+        <div class="card white">
+        <div class="chip col m12 disclaimer" style = "color:black">
+        	Joseph
+        	<img src = "http://memes.ucoz.com/_nw/14/91658412.jpg">
+            
+        </div>
+            <div class="card-content">
+            <span class="card-title black-text disclaimer">
+            	The people who cast the votes dont decide an election, the people who
+            	count the votes do<br/>
+            	
+            	<a href# class="secondary-content"><i class="material-icons">exposure_plus_1</i>
+            	<a href# class="secondary-content"><i class="material-icons">exposure_minus_1</i>
+            </span>
+            </div>
+            </div>
         </div>
        </div>
 </div>

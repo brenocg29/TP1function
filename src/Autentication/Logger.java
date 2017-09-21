@@ -1,4 +1,4 @@
-package back;
+package Autentication;
 import back.Comrade;
 import back.JsonHandler;
 /**
