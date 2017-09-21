@@ -41,6 +41,30 @@
         </div>
         <div class = "col s12 m8 offset-m1">
         <div class="card white">
+            <div class="card-content">
+            <span class="card-title black-text">
+            Something on your mind?
+            </span>
+             <form class="container">
+                 <div class = "row">
+                   <div class="input-field col s12 m6">
+                     <textarea id="post"></textarea>
+                     <label for="email">Only allowed opinions</label>
+                   </div>
+                   <div class="input-field col m6">
+                     <button class="btn waves-effect waves-light" type="submit" name="action">
+                       Post <i class="material-icons right">send</i>
+                     </button>
+                   </div>
+                 </div>
+       			</form>
+            </div>
+         </div>
+             
+        </div>
+        <div class = "row">
+        <div class = "col s12 m8 offset-m3">
+        <div class="card white">
         <div class="chip col m12 disclaimer" style = "color:black">
         	Joseph
         	<img src = "http://memes.ucoz.com/_nw/14/91658412.jpg">
@@ -48,12 +72,14 @@
         </div>
             <div class="card-content">
             <span class="card-title black-text disclaimer">
-            	I think my budy Kim Jong Un is doing a great job with Korea
+            	I think my buddy Kim Jong Un is doing a great job with Korea
             </span>
             </div>
             </div>
+             </div>
         </div>
-       <div class = "col s12 m8 offset-m1">
+        <div class = "row">
+       <div class = "col s12 m8 offset-m3">
         <div class="card white">
         <div class="chip col m12 disclaimer" style = "color:black">
         	Joseph
@@ -69,6 +95,7 @@
             	
             </div>
             </div>
+        </div>
         </div>
        </div>
        </div>
