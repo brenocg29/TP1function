@@ -62,15 +62,14 @@
         </div>
             <div class="card-content">
             <span class="card-title black-text disclaimer">
-            	The people who cast the votes dont decide an election, the people who
-            	count the votes do<br/>
-            	
-            	<a href# class="secondary-content"><i class="material-icons">exposure_plus_1</i>
-            	<a href# class="secondary-content"><i class="material-icons">exposure_minus_1</i>
+            	The people who cast the votes dont decide an election the people who count the votes do<br/>
             </span>
+            	<a href = "#" class = "secondary-content"><i class = "material-icons">exposure_plus_1</i></a>
+            	<a href = "#" class = "secondary-content"><i class = "material-icons">exposure_minus_1</i></a>
+            	
             </div>
             </div>
         </div>
        </div>
-</div>
+       </div>
 </html>

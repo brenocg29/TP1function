@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="back.Comrade" import="back.Register"%>
+    pageEncoding="UTF-8" import="back.Comrade" import="Autentication.Register"%>
 <!DOCTYPE html>
 <html>
 <head>
