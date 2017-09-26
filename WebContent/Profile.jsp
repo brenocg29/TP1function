@@ -29,7 +29,6 @@
             <div class="card-image">
             <img src="https://coverfiles.alphacoders.com/128/12862.jpg" style = "height: 50vh">
               <span class="card-title disclaimer">Joseph Stalin</span>
-      
             </div>
          </div>
         </div>
@@ -62,10 +61,8 @@
          </div>
     <%
 	String info = null;  
-     info = "FERROU";               		 
-	if((String)request.getParameter("post")!=null){
-		info = "success";
-	 	posts.add(request.getParameter("post").toString());
+    if((String)request.getParameter("post")!=null){
+		posts.add(request.getParameter("post").toString());
 	}%>
         </div>
         <%for (String S:posts){%>

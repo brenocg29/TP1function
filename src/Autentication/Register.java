@@ -15,7 +15,7 @@ public class Register {
 	private String Name;
 	private String LastName;
 	//Todo hash pass
-	Register(String name, String UIN, String pass, String LastName, String username){
+	public Register(String name, String UIN, String pass, String LastName, String username){
 		this.userName = username;
 		this.pass = pass;
 		this.Name = name;

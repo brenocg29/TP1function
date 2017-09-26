@@ -29,7 +29,7 @@
 	 endeavor to keep them disunited"</p><br>
 	 <p></p> Vladimir Lennin
 	</div>
-	<form id = "register" action=register.jsp method = "POST">
+	<form id = "register" action="LoginServlet" method = "POST">
 	<div class="form-group  col-md-6">
     <label for="inputname">Name</label>
     <input type="Text" class="form-control" id="FName"  placeholder="Comrade name">
