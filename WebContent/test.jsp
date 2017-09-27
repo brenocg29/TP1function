@@ -12,9 +12,7 @@
 <link rel="stylesheet"
       href="./css/styles.css"
       type="text/css"/>
-
 </head>
-
 <body>
 	<div class="top">
 		<div class="init-banner">
@@ -23,7 +21,7 @@
 			4I/AAAAAAAAAq4/xLIAeT8jx1I/s1600/foice.jpg" width = "640" height = "128" id="logo">
 		</div>
 		<div class="log-pass col-md-6">
-			<form action=register.jsp>
+			<form  action = "LoggerServlet" method = "post">
 				Revolution number: <input type="text" name="login" id="login">
 				Password: <input type="Password" name="pass" id = "pass">
 				<input type = "submit" class="btn btn-danger" value=Login>
@@ -43,9 +41,7 @@
 				<p> The revolution need unity</p>
 				<p> Come live in a social network that gives meaning to the name social</p>
 				<p> Our great leaders invite you to take part in this revolution</p>
-				<a href="register.jsp"><button type="button" class="btn btn-danger">Register</button></a>
-				
-			
+				<a href="register.jsp"><button type="button" class="btn btn-danger">Register</button></a>			
 			</div>
 	</div>
 	</body>

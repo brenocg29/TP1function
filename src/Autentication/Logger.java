@@ -16,7 +16,7 @@ public class Logger {
 	 * @param user username given by user
 	 * @param pass password given by user
 	 */
-	Logger(String user, String pass){
+	public Logger(String user, String pass){
 		this.user = user;
 		this.pass = pass;
 	}

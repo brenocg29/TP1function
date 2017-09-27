@@ -1,9 +1,11 @@
 package Autentication;
 import back.JsonHandler;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.json.JSONException;
+import org.json.simple.DeserializationException;
 
 import back.Comrade;
 /**
@@ -22,7 +24,7 @@ public class Register {
 	private String LastName;
 	JsonHandler J;
 	//Todo hash pass
-	public Register(String name, String UIN, String pass, String LastName, String username){
+	public Register(String name, String UIN, String pass, String LastName, String username) throws FileNotFoundException, DeserializationException, IOException{
 		J = new JsonHandler();
 		this.userName = username;
 		this.UIN = UIN;
@@ -55,7 +57,7 @@ public class Register {
 	private void hashPass() {
 		//todo Hash password with SHA3
 	}
-	public boolean SaveNewUser() throws IOException {	
+	public boolean SaveNewUser() throws IOException, DeserializationException {	
 		try {
 			J.SaveJson(this);
 		} catch (JSONException e) {

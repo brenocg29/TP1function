@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.DeserializationException;
+
 @WebServlet("/RegisterServlet")
 public class ResgisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -17,13 +19,18 @@ public class ResgisterServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String Name = request.getParameter("FName");
-		System.out.println(Name);
 		String LastName = request.getParameter("Surname");
 		String UIN = request.getParameter("UIN");
 		String username = request.getParameter("username");
 		String password = request.getParameter("Password1");
-		Register R = new Register(Name,UIN,password,LastName,username);
-		R.SaveNewUser();
+		Register R;
+		try {
+			R = new Register(Name,UIN,password,LastName,username);
+			R.SaveNewUser();	
+		} catch (DeserializationException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		response.sendRedirect("Profile.jsp");
 	}
 
