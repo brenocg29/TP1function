@@ -3,6 +3,8 @@ package Servlet;
 import Autentication.Logger;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.NoSuchAlgorithmException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -23,7 +25,7 @@ public class LoggerServlet extends HttpServlet {
 		Logger L = new Logger(username, password);
 		try {
 			test = L.CheckUserPass();
-		} catch (DeserializationException e) {
+		} catch (DeserializationException | NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
 		if (test == true) {

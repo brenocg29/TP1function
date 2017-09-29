@@ -1,6 +1,10 @@
 package Autentication;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import javax.xml.bind.DatatypeConverter;
 
 import org.json.simple.DeserializationException;
 
@@ -31,17 +35,19 @@ public class Logger {
 	 * @throws IOException 
 	 * @throws DeserializationException 
 	 * @throws FileNotFoundException 
+	 * @throws NoSuchAlgorithmException 
 	 */
-	public boolean CheckUserPass() throws FileNotFoundException, DeserializationException, IOException {
+	public boolean CheckUserPass() throws FileNotFoundException, DeserializationException, IOException, NoSuchAlgorithmException {
 		JsonHandler J = new JsonHandler();
 		String t = J.readFromJson(user);
 		if (t == null) {
 			return false;
 		}
 		else {
-			System.out.println(t);
-			System.out.println(pass);
-			if(t.equals(pass)) {
+			MessageDigest md = MessageDigest.getInstance("SHA-256");
+			byte[] hashedpass = md.digest(pass.getBytes("UTF-8"));
+			String hashed = DatatypeConverter.printHexBinary(hashedpass);
+			if(t.equals(hashed)) {
 				System.out.println("ollaaaa");
 				return true;
 			}

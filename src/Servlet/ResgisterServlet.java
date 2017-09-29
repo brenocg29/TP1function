@@ -3,6 +3,8 @@ package Servlet;
 import Autentication.Register;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.NoSuchAlgorithmException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -27,7 +29,7 @@ public class ResgisterServlet extends HttpServlet {
 		try {
 			R = new Register(Name,UIN,password,LastName,username);
 			R.SaveNewUser();	
-		} catch (DeserializationException e1) {
+		} catch (DeserializationException | NoSuchAlgorithmException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}

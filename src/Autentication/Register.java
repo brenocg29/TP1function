@@ -3,6 +3,10 @@ import back.JsonHandler;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import javax.xml.bind.DatatypeConverter;
 
 import org.json.JSONException;
 import org.json.simple.DeserializationException;
@@ -24,13 +28,15 @@ public class Register {
 	private String LastName;
 	JsonHandler J;
 	//Todo hash pass
-	public Register(String name, String UIN, String pass, String LastName, String username) throws FileNotFoundException, DeserializationException, IOException{
+	public Register(String name, String UIN, String pass, String LastName, String username) throws FileNotFoundException, DeserializationException, IOException, NoSuchAlgorithmException{
 		J = new JsonHandler();
 		this.userName = username;
 		this.UIN = UIN;
-		this.pass = pass;
 		this.Name = name;
 		this.LastName = LastName;
+		MessageDigest md = MessageDigest.getInstance("SHA-256");
+		byte[] hashedpass = md.digest(pass.getBytes("UTF-8"));
+		this.pass = DatatypeConverter.printHexBinary(hashedpass);
 		J = new JsonHandler();
 	}
 	public String getUserName() {
