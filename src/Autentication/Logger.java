@@ -34,8 +34,20 @@ public class Logger {
 	 */
 	public boolean CheckUserPass() throws FileNotFoundException, DeserializationException, IOException {
 		JsonHandler J = new JsonHandler();
-		boolean t = J.readFromJson(user);
-		return t;
+		String t = J.readFromJson(user);
+		if (t == null) {
+			return false;
+		}
+		else {
+			System.out.println(t);
+			System.out.println(pass);
+			if(t.equals(pass)) {
+				System.out.println("ollaaaa");
+				return true;
+			}
+			return false;
+		}
+		
 		
 	}
 	/**

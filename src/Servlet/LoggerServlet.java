@@ -30,7 +30,11 @@ public class LoggerServlet extends HttpServlet {
 		response.sendRedirect("Profile.jsp");
 		}
 		else {
-			response.sendRedirect("test.jsp");
+			PrintWriter out = response.getWriter();
+			out.println("<script type=\"text/javascript\">");
+			out.println("alert('Username incorreto GO TO GULAG');");
+			out.println("location='test.jsp';");
+			out.println("</script>");
 		}
 	}
 

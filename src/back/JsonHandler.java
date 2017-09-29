@@ -75,12 +75,11 @@ public class JsonHandler {
 	 * @throws DeserializationException 
 	 * @throws FileNotFoundException 
 	 */
-	public boolean readFromJson(String  RegID) throws FileNotFoundException, DeserializationException, IOException {
+	public String readFromJson(String  RegID) throws FileNotFoundException, DeserializationException, IOException {
 		J = (JsonObject) Jsoner.deserialize(new FileReader("users.json"));	
 		J = (JsonObject) J.get(RegID);
-		if (J == null) return false;
-		System.out.println(J.toJson());
-		return true;
+		if (J == null) return null;
+		return J.getString("password");
 	}
 	public boolean readFromJson(Group G) {
 		return true;
