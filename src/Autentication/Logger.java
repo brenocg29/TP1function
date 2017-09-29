@@ -3,11 +3,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
 import javax.xml.bind.DatatypeConverter;
 
 import org.json.simple.DeserializationException;
+import org.json.simple.JsonObject;
 
+import Security.Hashing;
 import back.Comrade;
 import back.JsonHandler;
 /**
@@ -39,16 +42,15 @@ public class Logger {
 	 */
 	public boolean CheckUserPass() throws FileNotFoundException, DeserializationException, IOException, NoSuchAlgorithmException {
 		JsonHandler J = new JsonHandler();
-		String t = J.readFromJson(user);
+		JsonObject t = J.readFromJson(user);
 		if (t == null) {
 			return false;
 		}
 		else {
-			MessageDigest md = MessageDigest.getInstance("SHA-256");
-			byte[] hashedpass = md.digest(pass.getBytes("UTF-8"));
-			String hashed = DatatypeConverter.printHexBinary(hashedpass);
-			if(t.equals(hashed)) {
-				System.out.println("ollaaaa");
+			String salt = (String) t.get("salt");
+			String password = t.get("password").toString(); 
+			String hashed = Hashing.HashString(pass, DatatypeConverter.parseHexBinary(salt));
+			if(password.equals(hashed)) {
 				return true;
 			}
 			return false;

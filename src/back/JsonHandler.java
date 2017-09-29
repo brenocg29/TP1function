@@ -44,8 +44,8 @@ public class JsonHandler {
 		aux.put("LastName", Reg.getLastName());
 		aux.put("UIN", Reg.getUIN());
 		aux.put("password", Reg.getPass());
+		aux.put("salt", Reg.getSalt());
 		J.put(Reg.getUserName(),aux);		
-		System.out.println(J.toJson());
 		FileWriter file = new FileWriter("users.json");
 		BufferedWriter BW = new BufferedWriter(file);
 		BW.write(J.toJson());
@@ -75,11 +75,11 @@ public class JsonHandler {
 	 * @throws DeserializationException 
 	 * @throws FileNotFoundException 
 	 */
-	public String readFromJson(String  RegID) throws FileNotFoundException, DeserializationException, IOException {
+	public JsonObject readFromJson(String  RegID) throws FileNotFoundException, DeserializationException, IOException {
 		J = (JsonObject) Jsoner.deserialize(new FileReader("users.json"));	
 		J = (JsonObject) J.get(RegID);
 		if (J == null) return null;
-		return J.getString("password");
+		return J;
 	}
 	public boolean readFromJson(Group G) {
 		return true;

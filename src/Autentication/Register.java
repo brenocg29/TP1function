@@ -1,9 +1,10 @@
 package Autentication;
 import back.JsonHandler;
-
+import Security.Hashing;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.MessageDigest;
+import java.security.SecureRandom;
 import java.security.NoSuchAlgorithmException;
 
 import javax.xml.bind.DatatypeConverter;
@@ -26,6 +27,7 @@ public class Register {
 	private String UIN;
 	private String Name;
 	private String LastName;
+	private String salt;
 	JsonHandler J;
 	//Todo hash pass
 	public Register(String name, String UIN, String pass, String LastName, String username) throws FileNotFoundException, DeserializationException, IOException, NoSuchAlgorithmException{
@@ -34,9 +36,12 @@ public class Register {
 		this.UIN = UIN;
 		this.Name = name;
 		this.LastName = LastName;
-		MessageDigest md = MessageDigest.getInstance("SHA-256");
-		byte[] hashedpass = md.digest(pass.getBytes("UTF-8"));
-		this.pass = DatatypeConverter.printHexBinary(hashedpass);
+		SecureRandom sr = new SecureRandom();
+		byte[] S = new byte[10];
+		sr.nextBytes(S);
+		this.salt = DatatypeConverter.printHexBinary(S);
+		System.out.println(S.toString());
+		this.pass = Hashing.HashString(pass, S);
 		J = new JsonHandler();
 	}
 	public String getUserName() {
@@ -54,6 +59,12 @@ public class Register {
 		return Name;
 		}
 	
+	public String getSalt() {
+		return salt;
+	}
+	public JsonHandler getJ() {
+		return J;
+	}
 	public String getLastName() {
 		return LastName;
 		}
