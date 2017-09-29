@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.DeserializationException;
+
 @WebServlet("/LoggerServlet")
 public class LoggerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -17,9 +19,19 @@ public class LoggerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("login");
 		String password = request.getParameter("pass");
+		boolean test = false;
 		Logger L = new Logger(username, password);
-		
+		try {
+			test = L.CheckUserPass();
+		} catch (DeserializationException e) {
+			e.printStackTrace();
+		}
+		if (test == true) {
 		response.sendRedirect("Profile.jsp");
+		}
+		else {
+			response.sendRedirect("test.jsp");
+		}
 	}
 
 }

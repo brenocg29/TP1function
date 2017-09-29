@@ -39,7 +39,6 @@ public class JsonHandler {
 			J = (JsonObject) Jsoner.deserialize(new FileReader("users.json"));		
 	}
 	public boolean SaveJson(Register Reg) throws JSONException, IOException, DeserializationException{
-		System.out.println(J.toJson());
 		JsonObject aux = new JsonObject();
 		aux.put("Nome",Reg.getName());
 		aux.put("LastName", Reg.getLastName());
@@ -72,10 +71,15 @@ public class JsonHandler {
 	 * 
 	 * @param G Read from json, the object can be a comrade page, group or post
 	 * @return result of operation
+	 * @throws IOException 
+	 * @throws DeserializationException 
+	 * @throws FileNotFoundException 
 	 */
-	public boolean readFromJson(Register Reg) {
-		
-		
+	public boolean readFromJson(String  RegID) throws FileNotFoundException, DeserializationException, IOException {
+		J = (JsonObject) Jsoner.deserialize(new FileReader("users.json"));	
+		J = (JsonObject) J.get(RegID);
+		if (J == null) return false;
+		System.out.println(J.toJson());
 		return true;
 	}
 	public boolean readFromJson(Group G) {

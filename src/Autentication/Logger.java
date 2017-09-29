@@ -1,4 +1,9 @@
 package Autentication;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.json.simple.DeserializationException;
+
 import back.Comrade;
 import back.JsonHandler;
 /**
@@ -23,10 +28,15 @@ public class Logger {
 	/**
 	 * Check data and returns comrade object
 	 * @return
+	 * @throws IOException 
+	 * @throws DeserializationException 
+	 * @throws FileNotFoundException 
 	 */
-	public Comrade CheckUserPass() {
-		Comrade X = new Comrade("","","","","");
-		return X;
+	public boolean CheckUserPass() throws FileNotFoundException, DeserializationException, IOException {
+		JsonHandler J = new JsonHandler();
+		boolean t = J.readFromJson(user);
+		return t;
+		
 	}
 	/**
 	 * Handles a situation where user forgot his password
