@@ -21,7 +21,93 @@
 <div class="top col-md-6">
 	<a class="waves-effect waves-light red darken-4 btn"><i class="material-icons left">home</i>Home</a>
 	<a class="waves-effect waves-light btn red darken-4"><i class="material-icons left">exit_to_app</i>Log Out</a>
+	 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 </div>
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Messagens from Comrades</h4>
+     	
+  <ul id = "collapsa" class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">message</i>Camarada Pol Pot</div>
+      <div class="collapsible-body">
+      <span>
+      <div class="card white">
+        <div class="chip col m12 disclaimer" style = "color:black">
+        	Pol
+        	<img src = "http://www.jornalciencia.com/wp-content/uploads/2017/05/pol-pot-smiling.jpg">
+            
+        </div>
+            <div class="card-content">
+            <span class="card-title black-text disclaimer">
+        		Important info about Yankees
+            </span>
+            <p>Hello comrade Stalin, how are you doing today, i have some info about
+            Mhuricans call me XOXO Pol
+            <p>
+            </div>
+            </div>
+        
+      </span>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">message</i>Camarada Lennin</div>
+      <div class="collapsible-body"><span>
+      <div class="card white">
+        <div class="chip col m12 disclaimer" style = "color:black">
+        	Vladimir
+        	<img src = "https://i.ytimg.com/vi/yjoXiBtyZ1w/hqdefault.jpg">
+        </div>
+            <div class="card-content">
+            <span class="card-title black-text disclaimer">
+        		How are we doing today.
+            </span>
+            <p>Hello great comrade how is mother Russia doing today, I have a great ideia for a Hymn
+            </div>
+            </div>
+      
+      </span>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">message</i>Camarada Marx</div>
+      <div class="collapsible-body">
+      <span>
+      <div class="card white">
+        <div class="chip col m12 disclaimer" style = "color:black">
+        	Karl
+        	<img src = "http://cdn.thinglink.me/api/image/523023357868769280/1240/10/scaletowidth">
+        </div>
+            <div class="card-content">
+            <span class="card-title black-text disclaimer">
+        		Joseph Great ideia for a name for you kid
+            </span>
+            <p>Vladimir Putin, Just let this name sink in</p>
+            </div>
+            </div>
+      </span>
+      </div>
+    </li>
+  </ul> 
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  <script>
+  $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('#modal1').modal();
+  });
+  </script>
+  <script>
+
+  $(document).ready(function(){
+    $('#collapsa').collapsible();
+  });
+        
+  </script>
 <div class="init-body col-md-6">
 	<div class="row">
         <div class="col s12">
@@ -97,7 +183,6 @@
             </span>
             	<a href = "#" class = "secondary-content"><i class = "material-icons">exposure_plus_1</i></a>
             	<a href = "#" class = "secondary-content"><i class = "material-icons">exposure_minus_1</i></a>
-            	
             </div>
             </div>
         </div>
