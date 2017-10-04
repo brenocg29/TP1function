@@ -41,7 +41,8 @@ public class Logger {
 	 * @throws NoSuchAlgorithmException 
 	 */
 	public boolean CheckUserPass() throws FileNotFoundException, DeserializationException, IOException, NoSuchAlgorithmException {
-		JsonHandler J = new JsonHandler();
+		//change to return a Comrade Object
+		JsonHandler J = new JsonHandler("register");
 		JsonObject t = J.readFromJson(user);
 		if (t == null) {
 			return false;
@@ -56,7 +57,6 @@ public class Logger {
 			return false;
 		}
 		
-		
 	}
 	/**
 	 * Handles a situation where user forgot his password
@@ -67,8 +67,14 @@ public class Logger {
 	/**
 	 * Handles the situation where user wants to change its password
 	 * @param NewPass new password
+	 * @throws IOException 
+	 * @throws DeserializationException 
+	 * @throws NoSuchAlgorithmException 
+	 * @throws FileNotFoundException 
 	 */
-	public void changeUserPass(String NewPass) {
-		
+	public void changeUserPass(String NewPass) throws FileNotFoundException, NoSuchAlgorithmException, DeserializationException, IOException {
+		if (CheckUserPass() == true) {
+			
+		};
 	}
 }

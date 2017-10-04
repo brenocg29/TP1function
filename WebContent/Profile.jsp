@@ -21,7 +21,6 @@
 <div class="top col-md-6">
 	<a class="waves-effect waves-light red darken-4 btn"><i class="material-icons left">home</i>Home</a>
 	<a class="waves-effect waves-light btn red darken-4"><i class="material-icons left">exit_to_app</i>Log Out</a>
-	 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 </div>
 <div id="modal1" class="modal bottom-sheet">
     <div class="modal-content">
@@ -184,9 +183,32 @@
             	<a href = "#" class = "secondary-content"><i class = "material-icons">exposure_plus_1</i></a>
             	<a href = "#" class = "secondary-content"><i class = "material-icons">exposure_minus_1</i></a>
             </div>
+         </div>
+        </div>
+        </div>
+       </div>
+       <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red modal-trigger" href="#modal1">
+      <i class="large material-icons">message</i>
+    </a>
+    </div>
+  </div>
+  
+        <footer class="page-footer red accent-4">
+          <div class="container red accent-4">
+            <div class="row">
+              <div class="col l6 s12">
+              </div>
             </div>
-        </div>
-        </div>
-       </div>
-       </div>
+          </div>
+          <div class = "grey-text text-lighten-4">
+          	Designed in California Assembled in China
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Comunist Enterprises
+            </div>
+          </div>
+        </footer>
+            
 </html>

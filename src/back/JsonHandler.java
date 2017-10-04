@@ -35,8 +35,11 @@ public class JsonHandler {
 	 * @throws FileNotFoundException 
 	 */
 	
-	public JsonHandler() throws FileNotFoundException, DeserializationException, IOException {
-			J = (JsonObject) Jsoner.deserialize(new FileReader("users.json"));		
+	public JsonHandler(String type) throws FileNotFoundException, DeserializationException, IOException {
+		if (type.equals("register"))	
+			J = (JsonObject) Jsoner.deserialize(new FileReader("users.json"));
+		if (type.equals("comrade"))
+			J = (JsonObject) Jsoner.deserialize(new FileReader("comrade.json"));
 	}
 	public boolean SaveJson(Register Reg) throws JSONException, IOException, DeserializationException{
 		JsonObject aux = new JsonObject();
@@ -54,8 +57,20 @@ public class JsonHandler {
 		BW.close();
 		return true;
 	}
-	public boolean SaveJson(Comrade Com) throws JSONException{
-		
+	public boolean SaveJson(Comrade Com) throws JSONException, IOException{
+		JsonObject aux = new JsonObject();
+		aux.put("Nome",Com.getName());
+		aux.put("LastName", Com.getLastName());
+		aux.put("photoPath",Com.getPhotoPath());
+		aux.put("birthday",Com.getBirthday());
+		aux.put("age", Com.getAge());
+		J.put(Com.getUserName(),aux);		
+		FileWriter file = new FileWriter("comrade.json");
+		BufferedWriter BW = new BufferedWriter(file);
+		BW.write(J.toJson());
+		BW.newLine();
+		BW.flush();
+		BW.close();
 		return true;
 	}
 	public boolean SaveJson(Group G) {

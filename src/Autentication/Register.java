@@ -11,6 +11,7 @@ import javax.xml.bind.DatatypeConverter;
 
 import org.json.JSONException;
 import org.json.simple.DeserializationException;
+import org.json.simple.JsonObject;
 
 import back.Comrade;
 /**
@@ -31,7 +32,7 @@ public class Register {
 	JsonHandler J;
 	//Todo hash pass
 	public Register(String name, String UIN, String pass, String LastName, String username) throws FileNotFoundException, DeserializationException, IOException, NoSuchAlgorithmException{
-		J = new JsonHandler();
+		J = new JsonHandler("register");
 		this.userName = username;
 		this.UIN = UIN;
 		this.Name = name;
@@ -42,7 +43,6 @@ public class Register {
 		this.salt = DatatypeConverter.printHexBinary(S);
 		System.out.println(S.toString());
 		this.pass = Hashing.HashString(pass, S);
-		J = new JsonHandler();
 	}
 	public String getUserName() {
 		return userName;
@@ -68,23 +68,26 @@ public class Register {
 	public String getLastName() {
 		return LastName;
 		}
-	private boolean CheckUsername(){
+	private boolean CheckUsername() throws FileNotFoundException, DeserializationException, IOException{
+		JsonHandler auxCheck = new JsonHandler("register");
+		if(auxCheck.readFromJson(this.getUserName())!=null) {
+			System.out.println("escolha outro Username");
+			return false;
+		}
 		return true;
 	}
-	private void hashPass() {
-		//todo Hash password with SHA3
-	}
 	public boolean SaveNewUser() throws IOException, DeserializationException {	
+		if (CheckUsername()!= true) {
+			return false;
+		}
 		try {
 			J.SaveJson(this);
-		} catch (JSONException e) {
+			Comrade Com = new Comrade(this.Name,this.LastName,this.userName);
+			Com.SaveComrade();
+		} 
+		catch (JSONException e) {
 			e.printStackTrace();
 		}
-		if (CheckUsername()!= true) {
-			hashPass();
-			//todo call jsonhandler to save user
-			return true;
-		}
-		return false;
+		return true;
 	}
 }

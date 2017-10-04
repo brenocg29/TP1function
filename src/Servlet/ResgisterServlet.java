@@ -28,7 +28,11 @@ public class ResgisterServlet extends HttpServlet {
 		Register R;
 		try {
 			R = new Register(Name,UIN,password,LastName,username);
-			R.SaveNewUser();	
+			boolean teste = R.SaveNewUser();
+			if (teste == false) {
+				response.sendRedirect("register.jsp");
+				return;
+			}
 		} catch (DeserializationException | NoSuchAlgorithmException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
