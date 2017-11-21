@@ -20,11 +20,11 @@
 			"http://4.bp.blogspot.com/-ZDXIfnQD2nI/UgEQO63k-
 			4I/AAAAAAAAAq4/xLIAeT8jx1I/s1600/foice.jpg" width = "640" height = "128" id="logo">
 		</div>
-		<div class="log-pass col-md-6">
+		<div class="log-pass col-md-6 disclaimer">
 			<form  action = "LoggerServlet" method = "post">
-				Revolution number: <input type="text" name="login" id="login">
+				Login: <input type="text" name="login" id="login">
 				Password: <input type="Password" name="pass" id = "pass">
-				<input type = "submit" class="btn btn-danger" value=Login>
+				<input type = "submit" class="btn btn-danger" value=Login☭>
 			</form>
 		</div>
 	</div>

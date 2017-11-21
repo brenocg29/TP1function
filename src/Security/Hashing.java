@@ -5,7 +5,14 @@ import java.security.MessageDigest;
 import java.security.SecureRandom;
 import java.security.NoSuchAlgorithmException;
 import javax.xml.bind.DatatypeConverter;
-
+/**
+ * Class to hash passwords
+ * @author Breno Chaves Gabrich
+ * @author Gabriel Pire
+ * @author Fernanda Ramalho
+ * 
+ *
+ */
 public class Hashing {
 	static public String HashString(String pass, byte[] Salt) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 		MessageDigest md = MessageDigest.getInstance("SHA-256");

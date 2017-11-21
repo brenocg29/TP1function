@@ -51,6 +51,12 @@ div.text-disclaimer{
 #lennin{
 	width:70%
 }
+.date{
+	font-family :'Russo One', sans-serif;
+	font-size:10px;
+	color:black;
+}
+
 #logo{
 	width:70vh;
 	height:20vh;

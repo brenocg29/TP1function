@@ -1,6 +1,8 @@
 package Servlet;
 
-import Autentication.Logger;
+import Autentication.AtenticationFacade;
+import siteEntities.Comrade;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
@@ -21,15 +23,19 @@ public class LoggerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("login");
 		String password = request.getParameter("pass");
-		boolean test = false;
-		Logger L = new Logger(username, password);
+		Comrade test = null;
+		AtenticationFacade L = AtenticationFacade.getInstance();
 		try {
-			test = L.CheckUserPass();
+			test = L.MakeLogin(username, password);
 		} catch (DeserializationException | NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
-		if (test == true) {
-		response.sendRedirect("Profile.jsp");
+		if (test != null) {
+		request.setAttribute("sharedCom", test);
+		request.getSession().setAttribute("sharedCom", test);
+		request.getSession().setAttribute("praised", "0");
+		this.getServletConfig().getServletContext().setAttribute("sharedCom", test);
+		request.getRequestDispatcher("/ProfileServlet").forward(request, response);
 		}
 		else {
 			PrintWriter out = response.getWriter();

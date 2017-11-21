@@ -13,6 +13,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="WebContent/Comrade.java"/>
+	<classpathentry kind="lib" path="java-json.jar"/>
+	<classpathentry kind="lib" path="WebContent/register.jsp"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

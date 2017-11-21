@@ -1,5 +1,6 @@
 package Servlet;
 
+import Autentication.AtenticationFacade;
 import Autentication.Register;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,11 +26,11 @@ public class ResgisterServlet extends HttpServlet {
 		String UIN = request.getParameter("UIN");
 		String username = request.getParameter("username");
 		String password = request.getParameter("Password1");
-		Register R;
+		boolean R = false;
+		AtenticationFacade L = AtenticationFacade.getInstance();
 		try {
-			R = new Register(Name,UIN,password,LastName,username);
-			boolean teste = R.SaveNewUser();
-			if (teste == false) {
+			R = L.MakeRegister(Name,UIN,password,LastName,username);
+			if (R == false) {
 				response.sendRedirect("register.jsp");
 				return;
 			}
@@ -37,7 +38,7 @@ public class ResgisterServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		response.sendRedirect("Profile.jsp");
+		response.sendRedirect("test.jsp");
 	}
 
 }

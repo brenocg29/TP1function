@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="back.Comrade" import="Autentication.Register"%>
+    pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,23 +32,23 @@
 	<form id = "register" action="RegisterServlet" method = "POST">
 	<div class="form-group  col-md-6">
     <label for="inputname">Name</label>
-    <input type="Text" class="form-control" name = "FName" id="FName"  placeholder="Comrade name">
+    <input type="Text" class="form-control" name = "FName" id="FName"  placeholder="Comrade name" required>
   </div>
   <div class="form-group  col-md-6">
     <label for="inputSurname">Surname</label>
-    <input type="Text" class="form-control" name = "Surname" id="Surname" placeholder="Surname">
+    <input type="Text" class="form-control" name = "Surname" id="Surname" placeholder="Surname" required>
   </div>
   <div class="form-group  col-md-6">
     <label for="InputUIN">UIN</label>
-    <input type="Text" class="form-control" name = "UIN" id="UIN" placeholder="Unified international num">
+    <input type="Text" class="form-control" name = "UIN" id="UIN" placeholder="Unified international num" required>
   </div>
   <div class="form-group  col-md-6">
     <label for="Inputusername">Username</label>
-    <input type="Text" class="form-control" name = "username" id="username" placeholder="Username">
+    <input type="Text" class="form-control" name = "username" id="username" placeholder="Username" required>
   </div>
   <div class="form-group  col-md-6">
     <label for="InputPassword1">Password</label>
-    <input type="password" class="form-control" name = "Password1"id="Password1" placeholder = "Password">
+    <input type="password" class="form-control" name = "Password1"id="Password1" placeholder = "Password" required>
 </div>
 <div class = "col-md-12">
   <button type="submit" class="btn btn-danger">Submit</button>
